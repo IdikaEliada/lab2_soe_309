@@ -15,6 +15,7 @@ public class Main {
             System.out.println("Phone: " + student.getPhone());
             System.out.println("Email: " + student.getEmail());
             System.out.println("Department: " + student.getDepartment());
+            System.out.println("---------------");
         }
     }
 }
