@@ -6,14 +6,14 @@ import domain.Student;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
-import infrastructure.data.DataBaseConnection;
+import infrastructure.data.DatabaseConnection;
 
 
 public class AddStudentRepository {
     public void addStudent(Student student) {
         String sql = "INSERT INTO students (reg_number, first_name, last_name, phone, email, department) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
-        try (Connection conn = DataBaseConnection.getConnection();
+        try (Connection conn = DatabaseConnection.getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, student.getRegNumber());
             pstmt.setString(2, student.getFirstName());
