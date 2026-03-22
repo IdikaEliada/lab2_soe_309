@@ -1,13 +1,10 @@
 package infrastructure.repository;
 
-
-// Removed: import domain.repository.UserRepository; (unused)
 import domain.Student;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import infrastructure.data.DatabaseConnection;
-
 
 public class AddStudentRepository {
     public void addStudent(Student student) {
